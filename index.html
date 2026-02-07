@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idle Dwarfs</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div>
+        <h1>Idle Dwarfs</h1>
+        <p class="subtitle">Mine, trade, and unlock the world of dwarven biomes.</p>
+      </div>
+      <div class="gold-display">
+        <span>Gold</span>
+        <strong id="gold-amount">0</strong>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="sidebar">
+        <div class="panel">
+          <h2>Resources</h2>
+          <div id="resource-list" class="resource-list"></div>
+        </div>
+        <div class="panel">
+          <h2>Global Bonuses</h2>
+          <ul id="global-bonus-list" class="bonus-list"></ul>
+        </div>
+      </section>
+
+      <section class="content">
+        <div id="world-view" class="view"></div>
+        <div id="mine-view" class="view hidden"></div>
+      </section>
+    </main>
+
+    <template id="mine-card-template">
+      <div class="card mine-card">
+        <div>
+          <h3 class="mine-title"></h3>
+          <p class="mine-description"></p>
+          <ul class="mine-resources"></ul>
+        </div>
+        <div class="mine-actions"></div>
+      </div>
+    </template>
+
+    <template id="layer-template">
+      <div class="card layer-card">
+        <div>
+          <h3 class="layer-title"></h3>
+          <p class="layer-resource"></p>
+          <p class="layer-stats"></p>
+        </div>
+        <div class="layer-actions"></div>
+      </div>
+    </template>
+
+    <template id="building-template">
+      <div class="card building-card">
+        <div>
+          <h3 class="building-title"></h3>
+          <p class="building-description"></p>
+          <p class="building-effect"></p>
+        </div>
+        <div class="building-actions"></div>
+      </div>
+    </template>
+
+    <script src="main.js"></script>
+  </body>
+</html>
